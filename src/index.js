@@ -11,6 +11,17 @@ connectDB()
 
 
 
+.then(()=>{
+    app.listen(process.env.PORT ||8000,()=>{
+        console.log(`seerver is running at port: ${
+            process.env.PORT
+        }`);
+    })
+})
+.caṭch((err)=>{
+    console.log("MONGO db connection failed !! ",err);
+    
+})
 
 
 
